@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Flexbox</title>
+    <title>CSS Grid</title>
     <style>
       .el--1 {
         background-color: blueviolet;
@@ -30,53 +30,59 @@
       }
       .el--8 {
         background-color: crimson;
+        grid-column: 1/4;
+        grid-row: 1/2;
       }
 
-      .container {
+      .container--1 {
         /* STARTER */
         font-family: sans-serif;
         background-color: #ddd;
         font-size: 40px;
         margin: 40px;
 
-        /* FLEXBOX */
-        display: flex;
-        align-items: stretch;
-      }
-      .el {
-        /* margin-right: 40px; */
-        flex-basis: 500px;
+        /* CSS GRID */
+        display: grid;
+        grid-template-columns: 200px 200px 1fr 2fr;
+        grid-template-rows: 300px 200px;
+        gap: 10px;
       }
 
-      .el--1 {
-        display: flex;
-        align-self: flex-start;
-        order: 2;
-      }
-      .el--5,
-      .el--6 {
-        display: flex;
-        align-self: flex-end;
-      }
-      .el--5 {
-        order: 1;
-      }
+      .container--2 {
+        /* STARTER */
+        font-family: sans-serif;
+        background-color: black;
+        font-size: 40px;
+        margin: 100px;
 
-      .el--8 {
-        order: -1;
+        width: 1000px;
+        height: 600px;
+
+        /* CSS GRID */
+        /* display: grid;
+        grid-template-columns: 300px 200px; */
       }
     </style>
   </head>
   <body>
-    <div class="container">
-      <div class="el el--1">HTML</div>
-      <div class="el el--2">and</div>
-      <div class="el el--3">CSS</div>
-      <div class="el el--4">are</div>
-      <div class="el el--5">amazing</div>
-      <div class="el el--6">languages</div>
-      <div class="el el--7">to</div>
-      <div class="el el--8">learn</div>
+    <div class="container--1">
+      <div class="el el--1">(1) HTML</div>
+      <div class="el el--2">(2) and</div>
+      <div class="el el--3">(3) CSS</div>
+      <div class="el el--4">(4) are</div>
+      <div class="el el--5">(5) amazing</div>
+      <div class="el el--6">(6) languages</div>
+      <div class="el el--7">(7) to</div>
+      <div class="el el--8">(8) learn</div>
+    </div>
+
+    <div class="container--2">
+      <div class="el el--1">(1)</div>
+      <div class="el el--3">(3)</div>
+      <div class="el el--4">(4)</div>
+      <div class="el el--5">(5)</div>
+      <div class="el el--6">(6)</div>
+      <div class="el el--7">(7)</div>
     </div>
   </body>
 </html>
