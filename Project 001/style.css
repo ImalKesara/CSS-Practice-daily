@@ -20,6 +20,7 @@ body {
 }
 
 .container {
+  background-color: antiquewhite;
   width: 960px;
   margin: 0 auto;
 }
