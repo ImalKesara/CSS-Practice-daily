@@ -16,11 +16,11 @@ FONT SIZE SYSTEM (px)
 /* GENERAL STYLES */
 /* ------------------------ */
 body {
-  font-family: sans-serif;
+  font-family: "inter", sans-serif;
 }
 
 .container {
-  background-color: antiquewhite;
+  /* background-color: antiquewhite; */
   width: 960px;
   margin: 0 auto;
 }
@@ -32,6 +32,8 @@ section {
 
 h2 {
   margin-bottom: 48px;
+  font-size: 36px;
+  letter-spacing: -0.5px;
 }
 
 .grid-3-cols {
@@ -58,10 +60,14 @@ header {
 
 h1 {
   margin-bottom: 24px;
+  font-size: 44px;
+  line-height: 1.2;
 }
 
 .header-text {
   margin-bottom: 24px;
+  line-height: 1.6;
+  font-size: 16px;
 }
 
 img {
