@@ -1,0 +1,92 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 30px;
+}
+img {
+  width: 700px;
+  height: 400px;
+}
+
+header {
+  padding: 20px 40px;
+  background: #fff;
+}
+
+header h1 {
+  grid-column: span 6;
+}
+
+header nav {
+  grid-column: 7 / span 6;
+  justify-self: end;
+}
+
+header nav a {
+  color: #333;
+  margin-left: 10px;
+  text-decoration: none;
+}
+
+main {
+  max-width: 1200px;
+  margin: 60px auto;
+  padding: 20px;
+}
+
+main img {
+  grid-column: span 6;
+  width: 100%;
+}
+
+main .welcome h2 {
+  margin-bottom: 30px;
+}
+
+main .welcome {
+  grid-column: 7 / span 6;
+  display: flex;
+  justify-content: center;
+
+  flex-direction: column;
+}
+
+h2 {
+  grid-column: span 12;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+main .card {
+  grid-column: span 4;
+}
+
+.card {
+  background: #fbfaed;
+  padding: 20px 40px;
+  border-radius: 10px;
+  box-shadow: 10px 9px 19px -6px rgba(0, 0, 0, 0.4);
+}
+
+@media screen and (max-width: 960px) {
+  main img {
+    grid-column: 2 / span 10;
+  }
+
+  main .welcome {
+    grid-column: 3 / span 8;
+  }
+  main .card {
+    grid-column: 3 / span 8;
+  }
+}
